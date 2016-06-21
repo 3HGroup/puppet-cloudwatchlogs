@@ -91,7 +91,7 @@ class cloudwatchlogs (
     /^(Ubuntu|CentOS|RedHat)$/: {
       if ! defined(Package['wget']) {
         package { 'wget':
-          ensure => 'present',
+          ensure => 'latest',
         }
       }
 
