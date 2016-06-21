@@ -137,6 +137,7 @@ class cloudwatchlogs (
       } ->
       file { '/var/awslogs/etc/awslogs.conf':
         ensure => 'link',
+        force => true,
         target => '/etc/awslogs/awslogs.conf',
       } ->
       file { '/var/awslogs/etc/config':
